@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont,
+    "Apple SD Gothic Neo", "Malgun Gothic", "Noto Sans KR", system-ui, sans-serif;
+
+  /* 로고 오렌지(#C87932) 기준. 흰 글씨 버튼 대비(4.5:1)를 위해 600은 한 톤 진하게 */
+  --color-brand-50: #fcf6ef;
+  --color-brand-100: #f7e8d6;
+  --color-brand-200: #efd3b3;
+  --color-brand-300: #e4b382;
+  --color-brand-400: #d6914f;
+  --color-brand-500: #c87932;
+  --color-brand-600: #a95f20;
+  --color-brand-700: #8c4e1b;
+  --color-brand-800: #723f18;
+  --color-brand-900: #5c3416;
+
+  --color-ink-50: #f6f7f9;
+  --color-ink-100: #eceef2;
+  --color-ink-200: #d5d9e2;
+  --color-ink-300: #b0b8c8;
+  --color-ink-400: #8590a7;
+  --color-ink-500: #66728c;
+  --color-ink-600: #515b73;
+  --color-ink-700: #424a5e;
+  --color-ink-800: #39404f;
+  --color-ink-900: #24242b;
+  --color-ink-950: #18181d;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-white text-ink-900 antialiased;
+    word-break: keep-all;
+    overflow-wrap: break-word;
+    /* 고정 하단 전화바가 콘텐츠를 가리지 않도록 모바일에서만 여백 확보 */
+    padding-bottom: calc(4.5rem + env(safe-area-inset-bottom));
+  }
+
+  @media (min-width: 768px) {
+    body {
+      padding-bottom: 0;
+    }
+  }
+
+  section[id],
+  div[id] {
+    scroll-margin-top: 5rem;
+  }
+
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-brand-600;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

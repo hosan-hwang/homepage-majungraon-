@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="30mm" height="30mm" viewBox="0 0 30 30">
+  <g id="logo-bag" fill="none" stroke="#24242B" stroke-width="1.65" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M6.2 4.3 H23.8 L25.4 25.4 H4.6 Z" fill="#FFFFFF"/>
+  </g>
+  <g id="smile" fill="#C87932" stroke="#C87932" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="10.4" cy="10.6" r="1.5" stroke="none"/>
+    <circle cx="19.6" cy="10.6" r="1.5" stroke="none"/>
+    <path d="M10.4 13.7 C10.6 20.1 19.4 20.1 19.6 13.7" fill="none"/>
+  </g>
+</svg>
